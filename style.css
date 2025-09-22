@@ -1,0 +1,88 @@
+/* Basic body styling */
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #f857a6, #ff5858); /* Fun gradient background */
+    color: #fff;
+}
+
+/* Main container for centering */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Glassmorphism effect for the stopwatch card */
+.stopwatch {
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    backdrop-filter: blur(20px); /* The blur effect */
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* 3D Shadow */
+    padding: 30px 40px;
+    text-align: center;
+}
+
+/* Styling for the time display */
+.display-time {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Container for the buttons */
+.controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* General button styling */
+.controls button {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px; /* Pill-shaped buttons */
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.2s ease;
+}
+
+/* Hover and active states for buttons */
+.controls button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.controls button:active {
+    transform: translateY(0);
+}
+
+/* Styling for the list of lap times */
+.laps-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    max-height: 150px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.laps-list li {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.laps-list li:last-child {
+    border-bottom: none;
+}
